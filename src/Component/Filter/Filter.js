@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { CSSTransition } from "react-transition-group";
 import { useDispatch, useSelector } from "react-redux";
-import { editFilter } from "../../redux/action/filterAction";
+import { editFilter } from "../../reduxTool/actionTool/filter";
 import styles from "./Filter.module.css";
 import "./Filter.css";
 

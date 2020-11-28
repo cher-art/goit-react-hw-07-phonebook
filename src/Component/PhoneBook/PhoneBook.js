@@ -2,8 +2,8 @@ import React, { useEffect } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { alertClose } from "../../redux/action/alertAction";
 import { setContactLocalStorage } from "../../redux/action/contactAction";
-import { getContactsOperation } from "../../redux/operations/taskOperation";
 import { useDispatch, useSelector } from "react-redux";
+import { getContactsOperation } from "../../redux/operations/taskOperations";
 import { v4 as uuidv4 } from "uuid";
 import Form from "../Form/Form";
 import ContactList from "../ContactList/ContactList";
@@ -13,7 +13,7 @@ import "./PhoneBook.css";
 const PhoneBook = () => {
   const contacts = useSelector((state) => state.contacts);
   const filter = useSelector((state) => state.filter);
-  const alert = useSelector((state) => state.alert);
+  const alert = useSelector((state) => state.isAlert);
   const dispatch = useDispatch();
 
   useEffect(() => {

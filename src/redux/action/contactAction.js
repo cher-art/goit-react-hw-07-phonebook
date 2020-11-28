@@ -1,9 +1,5 @@
-import {
-  ADD_CONTACT,
-  DELETE_CONTACT,
-  SET_LOCAL_STORAGE,
-  SET_CONTACTS,
-} from "../ducks/index";
+import { SET_CONTACT } from "../constant";
+import { ADD_CONTACT, DELETE_CONTACT, SET_LOCAL_STORAGE } from "../ducks/index";
 
 export const addContact = (objContact) => ({
   type: ADD_CONTACT,
@@ -17,8 +13,7 @@ export const setContactLocalStorage = (array) => ({
   type: SET_LOCAL_STORAGE,
   payload: array,
 });
-
-export const setContact = (contact) => ({
-  type: SET_CONTACTS,
-  payload: contact,
-});
+export const setContact = (contacts) => ({
+  type: SET_CONTACT,
+  payload: contacts
+})

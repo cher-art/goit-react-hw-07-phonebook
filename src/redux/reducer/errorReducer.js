@@ -1,14 +1,14 @@
-import { SET_ERROR, RESET_ERROR } from "../ducks/index";
+import { RESET_ERROR, SET_ERROR } from '../constant/index'
 
 const initialState = "";
 
 export default (state = initialState, action) => {
-  switch (action.type) {
+  switch (state.type) {
     case SET_ERROR:
-      return action.payload;
+      return action.payload
     case RESET_ERROR:
-      return "";
+      return ''
     default:
-      return state;
+        return state;;
   }
-};
+}

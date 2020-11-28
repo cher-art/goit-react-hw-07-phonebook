@@ -1,5 +1,4 @@
 import { LOADER_ON, LOADER_OFF } from "../constant/index";
-
 const initialState = false;
 
 export default (state = initialState, action) => {
@@ -11,4 +10,4 @@ export default (state = initialState, action) => {
     default:
       return state;
   }
-};
+}

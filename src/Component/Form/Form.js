@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addContact } from "../../redux/action/contactAction";
+import { alertOpen } from "../../redux/action/alertAction";
 import {
   getContactsOperation,
-  postContactsOperation,
-} from "../../redux/operations/taskOperation";
-// import { alertOpen } from "../../redux/action/alertAction";
+  postContactsOperations,
+} from "../../redux/operations/taskOperations";
 import styles from "./Form.module.css";
 
 const initialState = {
@@ -33,10 +33,10 @@ const Form = () => {
       number,
     };
     if (contacts.some((contact) => contact.name === singleContact.name)) {
-      // dispatch(alertOpen());
+      dispatch(alertOpen());
     } else {
+      dispatch(postContactsOperations(singleContact));
       dispatch(getContactsOperation());
-      dispatch(postContactsOperation(singleContact));
       dispatch(addContact(singleContact));
       setData(initialState);
     }
