@@ -18,6 +18,7 @@ export const getContactsOperation = () => async (dispatch) => {
   try {
     dispatch(loaderOn());
     const result = await axios.get(`http://localhost:5000/contacts`);
+    console.dir(result);
     dispatch(setContact(result.data));
   } catch (error) {
     dispatch(setError("Оууууу, щось сталось =D"));

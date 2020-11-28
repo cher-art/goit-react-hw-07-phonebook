@@ -36,7 +36,6 @@ const Form = () => {
       dispatch(alertOpen());
     } else {
       dispatch(postContactsOperations(singleContact));
-      dispatch(getContactsOperation());
       dispatch(addContact(singleContact));
       setData(initialState);
     }
